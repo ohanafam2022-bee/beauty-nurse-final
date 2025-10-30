@@ -227,49 +227,49 @@ function App() {
   // スタート画面
   if (!started && !result) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex flex-col justify-center p-3 sm:p-8 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex flex-col justify-end sm:justify-center p-0 sm:p-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
         
         <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           
-          <div className="relative min-h-[60vh] sm:min-h-0 flex items-end">
+          <div className="relative min-h-screen sm:min-h-0 flex flex-col justify-end sm:block">
             <img 
               src="/hero-image.png" 
               alt="美容ナース適職診断" 
-              className="absolute inset-0 w-full h-full object-cover sm:object-contain sm:relative sm:h-auto rounded-3xl shadow-2xl"
+              className="absolute inset-0 w-full h-full object-cover object-center sm:relative sm:object-contain sm:h-auto rounded-none sm:rounded-3xl shadow-none sm:shadow-2xl"
             />
             
-            <div className="relative sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 sm:px-6 mt-4 sm:mt-0">
+            <div className="relative sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 pb-3 sm:px-6 sm:pb-0 z-10">
               
-              <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 sm:p-8 shadow-2xl border-2 border-white/70">
-                <p className="text-gray-700 font-bold text-sm sm:text-lg mb-5 sm:mb-6 text-center">
+              <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-4 sm:p-8 shadow-2xl border-2 border-white/70">
+                <p className="text-gray-700 font-bold text-xs sm:text-lg mb-3 sm:mb-6 text-center leading-snug">
                   ✨ 10問の質問であなたにぴったりの美容医療キャリアを診断します ✨
                 </p>
                 
-                <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-5 sm:mb-6">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-3 sm:mb-6">
                   <div className="bg-pink-50 rounded-xl p-2 sm:p-4 text-center">
-                    <div className="text-xl sm:text-3xl mb-1">⏱️</div>
-                    <h3 className="font-bold text-[10px] sm:text-sm mb-0.5 sm:mb-1 text-gray-800">3分で完了</h3>
+                    <div className="text-lg sm:text-3xl mb-0.5 sm:mb-1">⏱️</div>
+                    <h3 className="font-bold text-[9px] sm:text-sm mb-0 sm:mb-1 text-gray-800">3分で完了</h3>
                     <p className="text-gray-600 text-[8px] sm:text-xs">10問の質問</p>
                   </div>
                   
                   <div className="bg-purple-50 rounded-xl p-2 sm:p-4 text-center">
-                    <div className="text-xl sm:text-3xl mb-1">📊</div>
-                    <h3 className="font-bold text-[10px] sm:text-sm mb-0.5 sm:mb-1 text-gray-800">6タイプ診断</h3>
+                    <div className="text-lg sm:text-3xl mb-0.5 sm:mb-1">📊</div>
+                    <h3 className="font-bold text-[9px] sm:text-sm mb-0 sm:mb-1 text-gray-800">6タイプ診断</h3>
                     <p className="text-gray-600 text-[8px] sm:text-xs">詳しく分析</p>
                   </div>
                   
                   <div className="bg-rose-50 rounded-xl p-2 sm:p-4 text-center">
-                    <div className="text-xl sm:text-3xl mb-1">💼</div>
-                    <h3 className="font-bold text-[10px] sm:text-sm mb-0.5 sm:mb-1 text-gray-800">キャリア提案</h3>
+                    <div className="text-lg sm:text-3xl mb-0.5 sm:mb-1">💼</div>
+                    <h3 className="font-bold text-[9px] sm:text-sm mb-0 sm:mb-1 text-gray-800">キャリア提案</h3>
                     <p className="text-gray-600 text-[8px] sm:text-xs">最適な職場</p>
                   </div>
                 </div>
                 
                 <button
                   onClick={() => setStarted(true)}
-                  className="w-full bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 text-white font-black text-base sm:text-xl py-3 sm:py-5 px-6 sm:px-12 rounded-full shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 text-white font-black text-sm sm:text-xl py-3 sm:py-5 px-6 sm:px-12 rounded-full shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
                 >
                   ✨ 診断をはじめる
                 </button>
@@ -390,41 +390,41 @@ function App() {
 
   // 質問画面
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex flex-col justify-center p-3 sm:p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex flex-col justify-end sm:justify-center p-0 sm:p-6 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
       
       <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         
-        <div className="relative min-h-[60vh] sm:min-h-0 flex items-end">
+        <div className="relative min-h-screen sm:min-h-0 flex flex-col justify-end sm:block">
           <img 
             src="/hero-image.png" 
             alt="美容ナース適職診断" 
-            className="absolute inset-0 w-full h-full object-cover sm:object-contain sm:relative sm:h-auto rounded-3xl shadow-2xl"
+            className="absolute inset-0 w-full h-full object-cover object-center sm:relative sm:object-contain sm:h-auto rounded-none sm:rounded-3xl shadow-none sm:shadow-2xl"
           />
           
-          <div className="relative sm:absolute sm:bottom-3 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 sm:px-4 mt-4 sm:mt-0">
+          <div className="relative sm:absolute sm:bottom-3 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 pb-3 sm:px-4 sm:pb-0 z-10">
             
-            <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-2xl border-2 border-white/70">
+            <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-6 shadow-2xl border-2 border-white/70">
               
-              <div className="mb-2.5 sm:mb-4">
-                <div className="flex justify-between items-center mb-1.5 sm:mb-2">
-                  <span className="text-[10px] sm:text-xs font-black text-pink-600 bg-pink-100 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full">
+              <div className="mb-2 sm:mb-4">
+                <div className="flex justify-between items-center mb-1 sm:mb-2">
+                  <span className="text-[9px] sm:text-xs font-black text-pink-600 bg-pink-100 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                     質問 {currentQuestion + 1} / {questions.length}
                   </span>
-                  <span className="text-[10px] sm:text-xs text-pink-500 font-black bg-pink-50 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full">
+                  <span className="text-[9px] sm:text-xs text-pink-500 font-black bg-pink-50 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                     {Math.round(((currentQuestion + 1) / questions.length) * 100)}%
                   </span>
                 </div>
-                <div className="w-full bg-pink-100 rounded-full h-1.5 sm:h-2 shadow-inner">
+                <div className="w-full bg-pink-100 rounded-full h-1 sm:h-2 shadow-inner">
                   <div
-                    className="bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 h-1.5 sm:h-2 rounded-full transition-all duration-500 shadow-lg"
+                    className="bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 h-1 sm:h-2 rounded-full transition-all duration-500 shadow-lg"
                     style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                   />
                 </div>
               </div>
 
-              <h2 className="text-sm sm:text-lg font-black text-gray-800 mb-2.5 sm:mb-4 leading-tight text-center">
+              <h2 className="text-xs sm:text-lg font-black text-gray-800 mb-2 sm:mb-4 leading-tight text-center">
                 {questions[currentQuestion].text}
               </h2>
               
@@ -433,15 +433,15 @@ function App() {
                   <button
                     key={index}
                     onClick={() => handleAnswer(option)}
-                    className="w-full text-left p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border-2 border-pink-100 hover:border-pink-300 hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group"
+                    className="w-full text-left p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border-2 border-pink-100 hover:border-pink-300 hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group active:scale-95"
                   >
                     <div className="flex items-center">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-pink-200 to-purple-200 group-hover:from-pink-400 group-hover:to-purple-400 flex items-center justify-center mr-2 sm:mr-3 transition-all duration-300 flex-shrink-0 shadow-md">
-                        <span className="text-pink-700 group-hover:text-white font-black transition-colors text-[10px] sm:text-sm">
+                      <div className="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-pink-200 to-purple-200 group-hover:from-pink-400 group-hover:to-purple-400 flex items-center justify-center mr-2 sm:mr-3 transition-all duration-300 flex-shrink-0 shadow-md">
+                        <span className="text-pink-700 group-hover:text-white font-black transition-colors text-[9px] sm:text-sm">
                           {String.fromCharCode(65 + index)}
                         </span>
                       </div>
-                      <span className="text-gray-700 group-hover:text-gray-900 font-bold text-[11px] sm:text-sm leading-snug">
+                      <span className="text-gray-700 group-hover:text-gray-900 font-bold text-[10px] sm:text-sm leading-snug">
                         {option.text}
                       </span>
                     </div>
