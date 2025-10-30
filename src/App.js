@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Heart, Sparkles, TrendingUp, Users, Award, Target } from 'lucide-react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
-const BeautyNurseAptitudeTest = () => {
+function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [result, setResult] = useState(null);
@@ -271,7 +271,7 @@ const BeautyNurseAptitudeTest = () => {
                   onClick={() => setStarted(true)}
                   className="w-full bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 text-white font-black text-base sm:text-xl py-3 sm:py-5 px-6 sm:px-12 rounded-full shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
                 >
-                  ✨ 診断をはじめます
+                  ✨ 診断をはじめる
                 </button>
               </div>
             </div>
@@ -388,7 +388,7 @@ const BeautyNurseAptitudeTest = () => {
     );
   }
 
-  // 質問画面（質問カードのサイズを最適化）
+  // 質問画面
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex items-center justify-center p-3 sm:p-6 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
@@ -454,6 +454,6 @@ const BeautyNurseAptitudeTest = () => {
       </div>
     </div>
   );
-};
+}
 
-export default BeautyNurseAptitudeTest;
+export default App;
