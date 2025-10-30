@@ -227,20 +227,20 @@ function App() {
   // スタート画面
   if (!started && !result) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex items-center justify-center p-4 sm:p-8 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex flex-col justify-center p-3 sm:p-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
         
-        <div className={`w-full max-w-6xl relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           
-          <div className="relative">
+          <div className="relative min-h-[60vh] sm:min-h-0 flex items-end">
             <img 
               src="/hero-image.png" 
               alt="美容ナース適職診断" 
-              className="w-full h-auto rounded-3xl shadow-2xl"
+              className="absolute inset-0 w-full h-full object-cover sm:object-contain sm:relative sm:h-auto rounded-3xl shadow-2xl"
             />
             
-            <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 sm:px-6">
+            <div className="relative sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 sm:px-6 mt-4 sm:mt-0">
               
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-5 sm:p-8 shadow-2xl border-2 border-white/70">
                 <p className="text-gray-700 font-bold text-sm sm:text-lg mb-5 sm:mb-6 text-center">
@@ -390,20 +390,20 @@ function App() {
 
   // 質問画面
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex items-center justify-center p-3 sm:p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 flex flex-col justify-center p-3 sm:p-6 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
       
-      <div className={`w-full max-w-6xl relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         
-        <div className="relative">
+        <div className="relative min-h-[60vh] sm:min-h-0 flex items-end">
           <img 
             src="/hero-image.png" 
             alt="美容ナース適職診断" 
-            className="w-full h-auto rounded-3xl shadow-2xl"
+            className="absolute inset-0 w-full h-full object-cover sm:object-contain sm:relative sm:h-auto rounded-3xl shadow-2xl"
           />
           
-          <div className="absolute bottom-3 sm:bottom-6 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-3 sm:px-4">
+          <div className="relative sm:absolute sm:bottom-3 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 sm:px-4 mt-4 sm:mt-0">
             
             <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-2xl border-2 border-white/70">
               
