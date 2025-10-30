@@ -119,7 +119,7 @@ const BeautyNurseAptitudeTest = () => {
       workplace: '美容皮膚科・フェイシャル',
       advice: '丁寧な接客と安心感が強み。リピート率の高い院で輝けます。',
       cta: 'あなたの"おもてなし力"を活かせる美容皮膚科をご紹介します',
-      ctaUrl: 'https://あなたの相談フォームURL.com'
+      ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     technical: {
       icon: Target,
@@ -131,7 +131,7 @@ const BeautyNurseAptitudeTest = () => {
       workplace: '美容外科・再生医療',
       advice: '最新施術やオペに携わる環境で力を発揮',
       cta: 'あなたのスキルを伸ばせるクリニックを一緒に見つけましょう',
-      ctaUrl: 'https://あなたの相談フォームURL.com'
+      ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     sales: {
       icon: TrendingUp,
@@ -143,7 +143,7 @@ const BeautyNurseAptitudeTest = () => {
       workplace: '自由診療・高歩合クリニック',
       advice: '接遇＋成果で高収入を狙えるタイプ',
       cta: '成果が正当に評価される職場をご紹介します',
-      ctaUrl: 'https://あなたの相談フォームURL.com'
+      ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     counseling: {
       icon: Users,
@@ -155,7 +155,7 @@ const BeautyNurseAptitudeTest = () => {
       workplace: '医療脱毛・カウンセリング重視院',
       advice: '丁寧なヒアリング力を活かせる職場が最適',
       cta: 'あなたの共感力を活かせる院を無料でご提案',
-      ctaUrl: 'https://あなたの相談フォームURL.com'
+      ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     balance: {
       icon: Sparkles,
@@ -167,7 +167,7 @@ const BeautyNurseAptitudeTest = () => {
       workplace: '総合美容クリニック',
       advice: '複数ジャンルで経験を積むと強みが活きる',
       cta: '理想のバランスを叶える転職プランを提案します',
-      ctaUrl: 'https://あなたの相談フォームURL.com'
+      ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     leader: {
       icon: Award,
@@ -179,7 +179,7 @@ const BeautyNurseAptitudeTest = () => {
       workplace: '大手クリニック・教育担当ポジション',
       advice: 'マネ職や教育担当としての成長に◎',
       cta: 'キャリアアップできる美容ナース転職相談へ',
-      ctaUrl: 'https://あなたの相談フォームURL.com'
+      ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     }
   };
 
