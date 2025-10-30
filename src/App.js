@@ -235,14 +235,20 @@ function App() {
           
           <div className="relative min-h-screen sm:min-h-0 flex flex-col justify-end sm:block">
             {/* 画像切り替え - pictureタグで確実に */}
-      <picture>
-  {/* スマホ用（640px未満） */}
+      <picture className="block">
+  {/* 640px未満 → モバイル画像 */}
   <source media="(max-width: 639px)" srcSet="/hero-image-mobile.png" />
-  {/* PC用（640px以上） */}
+  {/* 640px以上 → PC画像 */}
   <source media="(min-width: 640px)" srcSet="/hero-image.png" />
-  {/* フォールバック */}
-  <img src="/hero-image.png" alt="美容ナース適職診断" />
+  {/* フォールバック（PC画像） */}
+  <img
+    src="/hero-image.png"
+    alt="美容ナース適職診断"
+    className="w-full h-[48vh] sm:h-[56vh] md:h-[64vh] object-cover md:object-contain object-center rounded-3xl shadow-2xl select-none pointer-events-none"
+    loading="eager"
+  />
 </picture>
+
             
             <div className="relative sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 pb-3 sm:px-6 sm:pb-0 z-10">
               
