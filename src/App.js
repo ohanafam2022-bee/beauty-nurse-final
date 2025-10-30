@@ -234,18 +234,19 @@ function App() {
         <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           
           <div className="relative min-h-screen sm:min-h-0 flex flex-col justify-end sm:block">
-            {/* スマホ用画像 */}
-            <img 
-              src="/hero-image-mobile.png" 
-              alt="美容ナース適職診断" 
-              className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
-            />
-            {/* PC用画像 */}
-            <img 
-              src="/hero-image.png" 
-              alt="美容ナース適職診断" 
-              className="hidden sm:block w-full h-auto rounded-3xl shadow-2xl"
-            />
+            {/* 画像切り替え - pictureタグで確実に */}
+            <picture className="absolute inset-0 sm:static block">
+              {/* スマホ用画像（640px未満） */}
+              <source media="(max-width: 639px)" srcSet="/hero-image-mobile.png" />
+              {/* PC用画像（640px以上） */}
+              <source media="(min-width: 640px)" srcSet="/hero-image.png" />
+              {/* フォールバック */}
+              <img 
+                src="/hero-image.png" 
+                alt="美容ナース適職診断" 
+                className="w-full h-full sm:h-auto object-cover sm:object-contain object-center sm:rounded-3xl shadow-2xl"
+              />
+            </picture>
             
             <div className="relative sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 pb-3 sm:px-6 sm:pb-0 z-10">
               
@@ -404,18 +405,19 @@ function App() {
       <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         
         <div className="relative min-h-screen sm:min-h-0 flex flex-col justify-end sm:block">
-          {/* スマホ用画像 */}
-          <img 
-            src="/hero-image-mobile.png" 
-            alt="美容ナース適職診断" 
-            className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
-          />
-          {/* PC用画像 */}
-          <img 
-            src="/hero-image.png" 
-            alt="美容ナース適職診断" 
-            className="hidden sm:block w-full h-auto rounded-3xl shadow-2xl"
-          />
+          {/* 画像切り替え - pictureタグで確実に */}
+          <picture className="absolute inset-0 sm:static block">
+            {/* スマホ用画像（640px未満） */}
+            <source media="(max-width: 639px)" srcSet="/hero-image-mobile.png" />
+            {/* PC用画像（640px以上） */}
+            <source media="(min-width: 640px)" srcSet="/hero-image.png" />
+            {/* フォールバック */}
+            <img 
+              src="/hero-image.png" 
+              alt="美容ナース適職診断" 
+              className="w-full h-full sm:h-auto object-cover sm:object-contain object-center sm:rounded-3xl shadow-2xl"
+            />
+          </picture>
           
           <div className="relative sm:absolute sm:bottom-3 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full sm:max-w-4xl px-3 pb-3 sm:px-4 sm:pb-0 z-10">
             
