@@ -245,7 +245,7 @@ function App() {
             <img 
               src="/hero-image-mobile.png" 
               alt="美容ナース適職診断" 
-              className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
+              className="block sm:hidden absolute inset-0 w-full h-full object-contain object-top scale-95"
             />
             {/* PC用画像（640px以上で表示） */}
             <img 
