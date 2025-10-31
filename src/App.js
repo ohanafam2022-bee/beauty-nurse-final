@@ -217,6 +217,13 @@ function App() {
     }
   };
 
+  const handleBack = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+      setAnswers(answers.slice(0, -1));
+    }
+  };
+
   const resetTest = () => {
     setCurrentQuestion(0);
     setAnswers([]);
@@ -238,7 +245,7 @@ function App() {
             <img 
               src="/hero-image-mobile.png" 
               alt="美容ナース適職診断" 
-              className="block sm:hidden absolute inset-0 w-full h-full object-contain object-top"
+              className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
             />
             {/* PC用画像（640px以上で表示） */}
             <img 
@@ -250,27 +257,34 @@ function App() {
             <div className="absolute top-[30%] sm:absolute sm:bottom-6 sm:top-auto sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full max-w-lg sm:max-w-4xl px-5 sm:px-6 z-10 mx-auto">
               
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 sm:p-8 shadow-2xl border-2 border-white/70 h-[380px] sm:h-auto flex flex-col justify-between sm:justify-start">
-                <p className="text-gray-700 font-bold text-base sm:text-lg mb-6 sm:mb-6 text-center leading-relaxed">
-                  ✨ 10問の質問であなたにぴったりの美容医療キャリアを診断します ✨
-                </p>
+                <div className="text-gray-700 font-bold text-sm sm:text-lg mb-6 sm:mb-6 text-center leading-tight px-1">
+                  <p>✨10問の質問であなたにぴったりの✨</p>
+                  <p>✨美容医療キャリアを診断します✨</p>
+                </div>
                 
                 <div className="grid grid-cols-3 gap-4 sm:gap-4 mb-8 sm:mb-6">
                   <div className="bg-pink-50 rounded-xl p-4 sm:p-4 text-center">
                     <div className="text-3xl sm:text-3xl mb-2 sm:mb-1">⏱️</div>
-                    <h3 className="font-bold text-sm sm:text-sm mb-1 sm:mb-1 text-gray-800">3分で完了</h3>
-                    <p className="text-gray-600 text-xs sm:text-xs">10問の質問</p>
+                    <h3 className="font-bold text-sm sm:text-sm text-gray-800">
+                      <div>3分で</div>
+                      <div>完了</div>
+                    </h3>
                   </div>
                   
                   <div className="bg-purple-50 rounded-xl p-4 sm:p-4 text-center">
                     <div className="text-3xl sm:text-3xl mb-2 sm:mb-1">📊</div>
-                    <h3 className="font-bold text-sm sm:text-sm mb-1 sm:mb-1 text-gray-800">6タイプ診断</h3>
-                    <p className="text-gray-600 text-xs sm:text-xs">詳しく分析</p>
+                    <h3 className="font-bold text-sm sm:text-sm text-gray-800">
+                      <div>6タイプ</div>
+                      <div>診断</div>
+                    </h3>
                   </div>
                   
                   <div className="bg-rose-50 rounded-xl p-4 sm:p-4 text-center">
                     <div className="text-3xl sm:text-3xl mb-2 sm:mb-1">💼</div>
-                    <h3 className="font-bold text-sm sm:text-sm mb-1 sm:mb-1 text-gray-800">キャリア提案</h3>
-                    <p className="text-gray-600 text-xs sm:text-xs">最適な職場</p>
+                    <h3 className="font-bold text-gray-800">
+                      <div className="text-xs sm:text-sm">キャリア</div>
+                      <div className="text-sm sm:text-sm">提案</div>
+                    </h3>
                   </div>
                 </div>
                 
@@ -355,7 +369,7 @@ function App() {
                   <Sparkles className="w-6 h-6 mr-3 text-pink-500" />
                   おすすめ職場
                 </h3>
-                <p className="text-gray-800 font-bold text-lg">{resultData.workplace}</p>
+                <p className="text-gray-800 font-bold text-base sm:text-lg leading-relaxed">{resultData.workplace}</p>
               </div>
 
               <div className={`${resultData.bgColor} backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border-2 border-white/60`}>
@@ -363,7 +377,7 @@ function App() {
                   <Target className="w-6 h-6 mr-3 text-purple-500" />
                   キャリアアドバイス
                 </h3>
-                <p className="text-gray-800 font-bold text-lg">{resultData.advice}</p>
+                <p className="text-gray-800 font-bold text-base sm:text-lg leading-relaxed">{resultData.advice}</p>
               </div>
 
               <div className={`${resultData.bgColor} backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border-2 border-white/60`}>
@@ -371,12 +385,12 @@ function App() {
                   <Heart className="w-6 h-6 mr-3 text-rose-500" />
                   次のステップ
                 </h3>
-                <p className="text-gray-800 mb-6 font-bold text-lg">{resultData.cta}</p>
+                <p className="text-gray-800 mb-6 font-bold text-base sm:text-lg leading-relaxed">{resultData.cta}</p>
                 <a
                   href={resultData.ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block w-full bg-gradient-to-r ${resultData.color} text-white font-black py-5 px-8 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center shadow-xl text-lg`}
+                  className={`block w-full bg-gradient-to-r ${resultData.color} text-white font-black py-5 px-8 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center shadow-xl text-sm sm:text-lg whitespace-nowrap`}
                 >
                   💌 無料転職相談を申し込む
                 </a>
@@ -385,7 +399,7 @@ function App() {
 
             <button
               onClick={resetTest}
-              className="w-full bg-white/90 backdrop-blur-sm text-gray-700 font-bold py-5 px-8 rounded-full hover:bg-white hover:shadow-xl hover:scale-105 transition-all duration-300 border-3 border-pink-200 text-lg"
+              className="w-full bg-white/90 backdrop-blur-sm text-gray-700 font-bold py-5 px-8 rounded-full hover:bg-white hover:shadow-xl hover:scale-105 transition-all duration-300 border-3 border-pink-200 text-base sm:text-lg whitespace-nowrap"
             >
               🔄 もう一度診断する
             </button>
@@ -408,7 +422,7 @@ function App() {
           <img 
             src="/hero-image-mobile.png" 
             alt="美容ナース適職診断" 
-            className="block sm:hidden absolute inset-0 w-full h-full object-contain object-top"
+            className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
           />
           {/* PC用画像（640px以上で表示） */}
           <img 
@@ -436,9 +450,20 @@ function App() {
                     style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                   />
                 </div>
+                {currentQuestion > 0 && (
+                  <div className="mt-2 sm:mt-3">
+                    <button
+                      onClick={handleBack}
+                      className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 font-bold flex items-center gap-1 transition-colors whitespace-nowrap"
+                    >
+                      <span>←</span>
+                      <span>前の質問に戻る</span>
+                    </button>
+                  </div>
+                )}
               </div>
 
-              <h2 className="text-sm sm:text-lg font-black text-gray-800 mb-2.5 sm:mb-4 leading-snug text-center flex-shrink-0">
+              <h2 className="text-xs sm:text-lg font-black text-gray-800 mb-2.5 sm:mb-4 leading-relaxed text-center flex-shrink-0">
                 {questions[currentQuestion].text}
               </h2>
               
@@ -455,7 +480,7 @@ function App() {
                           {String.fromCharCode(65 + index)}
                         </span>
                       </div>
-                      <span className="text-gray-700 group-hover:text-gray-900 font-bold text-xs sm:text-sm leading-tight">
+                      <span className="text-gray-700 group-hover:text-gray-900 font-bold text-[11px] sm:text-sm leading-relaxed">
                         {option.text}
                       </span>
                     </div>
