@@ -233,12 +233,12 @@ function App() {
         
         <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           
-          <div className="relative min-h-screen sm:min-h-0 flex items-center justify-center sm:block">
+          <div className="relative min-h-screen sm:min-h-0 flex items-center justify-center sm:block bg-gradient-to-br from-pink-50 to-purple-50 sm:bg-transparent">
             {/* スマホ用画像（640px未満で表示） */}
             <img 
               src="/hero-image-mobile.png" 
               alt="美容ナース適職診断" 
-              className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
+              className="block sm:hidden absolute inset-0 w-full h-full object-contain object-top"
             />
             {/* PC用画像（640px以上で表示） */}
             <img 
@@ -247,7 +247,7 @@ function App() {
               className="hidden sm:block w-full h-auto rounded-3xl shadow-2xl"
             />
             
-            <div className="absolute top-[35%] sm:absolute sm:bottom-6 sm:top-auto sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full max-w-lg sm:max-w-4xl px-5 sm:px-6 z-10 mx-auto">
+            <div className="absolute top-[30%] sm:absolute sm:bottom-6 sm:top-auto sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full max-w-lg sm:max-w-4xl px-5 sm:px-6 z-10 mx-auto">
               
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 sm:p-8 shadow-2xl border-2 border-white/70 h-[380px] sm:h-auto flex flex-col justify-between sm:justify-start">
                 <p className="text-gray-700 font-bold text-base sm:text-lg mb-6 sm:mb-6 text-center leading-relaxed">
@@ -403,12 +403,12 @@ function App() {
       
       <div className={`w-full max-w-6xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         
-        <div className="relative min-h-screen sm:min-h-0 flex items-center justify-center sm:block">
+        <div className="relative min-h-screen sm:min-h-0 flex items-center justify-center sm:block bg-gradient-to-br from-pink-50 to-purple-50 sm:bg-transparent">
           {/* スマホ用画像（640px未満で表示） */}
           <img 
             src="/hero-image-mobile.png" 
             alt="美容ナース適職診断" 
-            className="block sm:hidden absolute inset-0 w-full h-full object-cover object-center"
+            className="block sm:hidden absolute inset-0 w-full h-full object-contain object-top"
           />
           {/* PC用画像（640px以上で表示） */}
           <img 
@@ -417,7 +417,7 @@ function App() {
             className="hidden sm:block w-full h-auto rounded-3xl shadow-2xl"
           />
           
-          <div className="absolute top-[35%] sm:absolute sm:bottom-3 sm:top-auto sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full max-w-lg sm:max-w-4xl px-5 sm:px-4 z-10 mx-auto">
+          <div className="absolute top-[30%] sm:absolute sm:bottom-3 sm:top-auto sm:left-1/2 sm:transform sm:-translate-x-1/2 w-full max-w-lg sm:max-w-4xl px-5 sm:px-4 z-10 mx-auto">
             
             <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl border-2 border-white/70 h-[450px] sm:h-auto flex flex-col justify-between sm:justify-start">
               
