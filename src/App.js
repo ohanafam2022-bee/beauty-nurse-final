@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Sparkles, TrendingUp, Users, Award, Target } from 'lucide-react';
+import { Heart, Sparkles, TrendingUp, Users, Award, Target, CheckCircle, XCircle, Building2, Stethoscope, Scissors } from 'lucide-react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 function App() {
@@ -115,10 +115,41 @@ function App() {
       bgColor: 'bg-gradient-to-br from-pink-50/90 to-rose-50/90',
       chartColor: '#f472b6',
       name: 'ホスピタリティ型',
-      description: '共感・丁寧・安心感重視',
-      workplace: '美容皮膚科・フェイシャル',
-      advice: '丁寧な接客と安心感が強み。リピート率の高い院で輝けます。',
-      cta: 'あなたの"おもてなし力"を活かせる美容皮膚科をご紹介します',
+      catchphrase: 'あなたは心で支える癒しのプロ',
+      description: 'あなたは、患者さんの小さな変化や不安に気づける「共感力」と「安心感を与える力」の持ち主。一人ひとりに寄り添い、丁寧な接客で信頼を築くことに喜びを感じるタイプです✨',
+      strengths: [
+        '患者さんの小さな変化や不安に気づける',
+        '丁寧な接客で安心感を与えられる',
+        'リピート率を高められる',
+        '落ち着いた雰囲気づくりが得意'
+      ],
+      weaknesses: [
+        'スピード重視の現場',
+        '接客時間が短すぎる環境',
+        '成果だけで評価される職場',
+        '流れ作業のような施術'
+      ],
+      recommendedWorkplaces: [
+        {
+          icon: Stethoscope,
+          title: '美容皮膚科クリニック',
+          description: 'フェイシャルやスキンケア治療を中心に、患者さんと長期的な関係を築けます。カウンセリング時間もしっかり取れ、一人ひとりに寄り添った接客ができる環境です。',
+          suitable: '丁寧なカウンセリングを大切にしたい人'
+        },
+        {
+          icon: Sparkles,
+          title: 'メディカルエステ',
+          description: 'リラックスした雰囲気の中で、美と癒しを提供できます。施術中の会話も大切にされ、患者さんとの距離が近い環境で働けます。',
+          suitable: '癒しの空間づくりが好きな人'
+        },
+        {
+          icon: Heart,
+          title: '美容皮膚科（アンチエイジング専門）',
+          description: '長期的なケアプランを提案し、患者さんの変化を見守れます。信頼関係を築きながら、継続的なサポートができる職場です。',
+          suitable: '長く患者さんを支えたい人'
+        }
+      ],
+      summary: 'あなたの「おもてなしの心」は、患者さんに安心と信頼を与える大きな武器。丁寧な接客を大切にする職場なら、あなたの強みが最大限に活きます💕',
       ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     technical: {
@@ -127,10 +158,41 @@ function App() {
       bgColor: 'bg-gradient-to-br from-purple-50/90 to-pink-50/90',
       chartColor: '#c084fc',
       name: 'テクニカル型',
-      description: '成長意欲・技術志向',
-      workplace: '美容外科・再生医療',
-      advice: '最新施術やオペに携わる環境で力を発揮',
-      cta: 'あなたのスキルを伸ばせるクリニックを一緒に見つけましょう',
+      catchphrase: 'あなたは技術を極めるスペシャリスト',
+      description: 'あなたは、高い「向上心」と「技術へのこだわり」を持つタイプ。最新の施術や医療機器に触れ、スキルを磨き続けることに喜びを感じます。専門性を高めることで、唯一無二の存在になれるでしょう✨',
+      strengths: [
+        '新しい技術や知識の習得が早い',
+        '細かい手技にこだわれる',
+        '向上心が高く、常に学び続けられる',
+        '専門性を活かしてキャリアアップできる'
+      ],
+      weaknesses: [
+        '単調な業務ばかりの職場',
+        '成長機会がない環境',
+        '教育制度が整っていない職場',
+        '古い技術しか使えない環境'
+      ],
+      recommendedWorkplaces: [
+        {
+          icon: Scissors,
+          title: '美容外科クリニック',
+          description: 'オペ介助や高度な施術に携われます。最新の医療技術に触れながら、専門的なスキルを身につけられる環境です。',
+          suitable: '高度な技術を習得したい人'
+        },
+        {
+          icon: Target,
+          title: '再生医療・美容皮膚科',
+          description: '最先端の美容医療技術を学べます。PRP療法やレーザー治療など、専門性の高い施術スキルを磨けます。',
+          suitable: '最新技術を学びたい人'
+        },
+        {
+          icon: Award,
+          title: '大手美容クリニック',
+          description: '充実した研修制度と最新機器が揃った環境。技術認定制度があり、スキルアップが明確に評価されます。',
+          suitable: '体系的にスキルを学びたい人'
+        }
+      ],
+      summary: 'あなたの「技術へのこだわり」は、美容医療の現場で大きな強み。最新技術を学べる環境なら、あなたの成長意欲が存分に発揮されます🔥',
       ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     sales: {
@@ -139,10 +201,41 @@ function App() {
       bgColor: 'bg-gradient-to-br from-rose-50/90 to-pink-50/90',
       chartColor: '#fb7185',
       name: 'セールス型',
-      description: '成果・挑戦・収入志向',
-      workplace: '自由診療・高歩合クリニック',
-      advice: '接遇＋成果で高収入を狙えるタイプ',
-      cta: '成果が正当に評価される職場をご紹介します',
+      catchphrase: 'あなたは成果で輝く実力派',
+      description: 'あなたは、「目標達成意欲」と「行動力」を兼ね備えたタイプ。数字や成果が見える環境でこそ、モチベーションが高まります。努力が正当に評価され、収入アップを目指せる職場で輝けるでしょう✨',
+      strengths: [
+        '目標を設定して達成する力が強い',
+        '患者さんのニーズを引き出せる',
+        '成果を出すための工夫ができる',
+        'モチベーションを維持する力がある'
+      ],
+      weaknesses: [
+        '成果が評価されない職場',
+        '固定給のみの環境',
+        'ノルマがない緩い職場',
+        '挑戦する機会がない環境'
+      ],
+      recommendedWorkplaces: [
+        {
+          icon: TrendingUp,
+          title: '自由診療クリニック',
+          description: 'インセンティブ制度があり、成果が収入に直結します。提案力を活かして、患者さんに最適なプランを提案できます。',
+          suitable: '成果を収入で実感したい人'
+        },
+        {
+          icon: Sparkles,
+          title: '大手美容クリニック（歩合制）',
+          description: '明確な評価制度と高いインセンティブが魅力。売上目標を達成することで、大きく収入を伸ばせます。',
+          suitable: '高収入を目指したい人'
+        },
+        {
+          icon: Award,
+          title: '美容皮膚科（カウンセリング重視）',
+          description: 'カウンセリング力を活かして、患者さんに最適な施術プランを提案。成約率に応じたインセンティブがあります。',
+          suitable: '提案力を活かしたい人'
+        }
+      ],
+      summary: 'あなたの「成果へのこだわり」は、美容医療業界で高く評価される力。努力が正当に評価される環境なら、収入もキャリアも大きく伸ばせます💰',
       ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     counseling: {
@@ -151,10 +244,41 @@ function App() {
       bgColor: 'bg-gradient-to-br from-pink-50/90 to-purple-50/90',
       chartColor: '#f472b6',
       name: 'カウンセリング型',
-      description: '傾聴力・心理的サポート',
-      workplace: '医療脱毛・カウンセリング重視院',
-      advice: '丁寧なヒアリング力を活かせる職場が最適',
-      cta: 'あなたの共感力を活かせる院を無料でご提案',
+      catchphrase: 'あなたは心に寄り添う傾聴のプロ',
+      description: 'あなたは、「傾聴力」と「共感力」に優れたタイプ。患者さんの本当の悩みを引き出し、心に寄り添ったサポートができます。信頼関係を築きながら、長期的なケアを提供することに喜びを感じるでしょう✨',
+      strengths: [
+        '患者さんの本音を引き出せる',
+        '悩みに寄り添った提案ができる',
+        '信頼関係を築くのが得意',
+        '心理的なサポートができる'
+      ],
+      weaknesses: [
+        'カウンセリング時間が短い職場',
+        '数字だけを求められる環境',
+        '流れ作業のような接客',
+        '深い関係を築けない職場'
+      ],
+      recommendedWorkplaces: [
+        {
+          icon: Heart,
+          title: 'カウンセリング重視クリニック',
+          description: '初回カウンセリングに時間をかけ、患者さんの悩みをじっくり聞けます。心に寄り添った提案ができる環境です。',
+          suitable: 'じっくり話を聞きたい人'
+        },
+        {
+          icon: Users,
+          title: '医療脱毛専門クリニック',
+          description: '複数回の施術を通じて、患者さんと長期的な関係を築けます。不安や悩みに寄り添いながらサポートできます。',
+          suitable: '長期的に支えたい人'
+        },
+        {
+          icon: Sparkles,
+          title: 'アンチエイジング専門クリニック',
+          description: '患者さんの人生に寄り添った美容医療を提供。継続的なカウンセリングで、信頼関係を深められます。',
+          suitable: '人生に寄り添いたい人'
+        }
+      ],
+      summary: 'あなたの「傾聴力」は、患者さんの心を開く鍵。じっくりカウンセリングできる環境なら、あなたの共感力が最大限に活きます💕',
       ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     balance: {
@@ -163,10 +287,41 @@ function App() {
       bgColor: 'bg-gradient-to-br from-pink-50/90 to-rose-50/90',
       chartColor: '#fda4af',
       name: 'バランス型',
-      description: '協調・柔軟・安定志向',
-      workplace: '総合美容クリニック',
-      advice: '複数ジャンルで経験を積むと強みが活きる',
-      cta: '理想のバランスを叶える転職プランを提案します',
+      catchphrase: 'あなたは柔軟に対応できるオールラウンダー',
+      description: 'あなたは、「協調性」と「柔軟性」を兼ね備えたタイプ。どんな環境にも適応でき、チームの潤滑油として活躍できます。幅広い経験を積むことで、あなただけの強みを見つけられるでしょう✨',
+      strengths: [
+        'どんな職場にも適応できる',
+        'チームワークを大切にできる',
+        '臨機応変な対応ができる',
+        '幅広いスキルを身につけられる'
+      ],
+      weaknesses: [
+        '専門性を極端に求められる職場',
+        '個人主義の強い環境',
+        '変化がなさすぎる職場',
+        '一人で全て完結する業務'
+      ],
+      recommendedWorkplaces: [
+        {
+          icon: Building2,
+          title: '総合美容クリニック',
+          description: '美容皮膚科から美容外科まで、幅広い診療科目がある環境。多様な経験を積みながら、自分の強みを見つけられます。',
+          suitable: '色々な経験を積みたい人'
+        },
+        {
+          icon: Sparkles,
+          title: '美容皮膚科（複数施術）',
+          description: 'レーザー、注入、スキンケアなど、様々な施術に携われます。バランスよくスキルを身につけられる環境です。',
+          suitable: 'バランス良く学びたい人'
+        },
+        {
+          icon: Heart,
+          title: '地域密着型クリニック',
+          description: 'アットホームな雰囲気で、患者さんと長く関われます。チームワークを大切にしながら、安定して働けます。',
+          suitable: '安定して働きたい人'
+        }
+      ],
+      summary: 'あなたの「柔軟性」は、どんな職場でも重宝される力。幅広い経験を積める環境なら、あなただけの強みが見つかります🌈',
       ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     },
     leader: {
@@ -175,10 +330,41 @@ function App() {
       bgColor: 'bg-gradient-to-br from-rose-50/90 to-pink-50/90',
       chartColor: '#fb7185',
       name: 'リーダー型',
-      description: '教育・マネジメント志向',
-      workplace: '大手クリニック・教育担当ポジション',
-      advice: 'マネ職や教育担当としての成長に◎',
-      cta: 'キャリアアップできる美容ナース転職相談へ',
+      catchphrase: 'あなたはチームを導くマネジメントのプロ',
+      description: 'あなたは、「リーダーシップ」と「教育力」を兼ね備えたタイプ。後輩の成長をサポートし、チーム全体のレベルアップに貢献できます。マネジメント職として、大きなやりがいを感じられるでしょう✨',
+      strengths: [
+        '後輩の教育・指導が得意',
+        'チーム全体を見渡せる',
+        '目標達成に向けて導ける',
+        'マネジメントスキルがある'
+      ],
+      weaknesses: [
+        '教育制度がない職場',
+        '個人プレーが求められる環境',
+        'キャリアアップの道がない職場',
+        '一人で黙々と働く業務'
+      ],
+      recommendedWorkplaces: [
+        {
+          icon: Award,
+          title: '大手美容クリニック（教育担当）',
+          description: '新人教育や研修制度が充実。教育担当として、後輩の成長をサポートできる環境です。',
+          suitable: '教育に携わりたい人'
+        },
+        {
+          icon: TrendingUp,
+          title: '美容クリニック（主任・師長）',
+          description: 'マネジメント職として、チーム運営に携われます。スタッフ育成や目標達成に向けて、リーダーシップを発揮できます。',
+          suitable: 'マネジメントしたい人'
+        },
+        {
+          icon: Building2,
+          title: '複数院展開クリニック',
+          description: 'エリアマネージャーや教育責任者として、複数の院を統括できます。より大きな視点でキャリアを築けます。',
+          suitable: '大きな責任を持ちたい人'
+        }
+      ],
+      summary: 'あなたの「リーダーシップ」は、組織を成長させる原動力。教育やマネジメントに携われる環境なら、あなたの力が存分に発揮されます👑',
       ctaUrl: 'https://lstep.app/form/30554/dnCnUA/44646f'
     }
   };
@@ -302,7 +488,7 @@ function App() {
     );
   }
 
-  // 結果画面
+  // 結果画面（LP風）
   if (result) {
     const resultData = resultTypes[result.type];
     const IconComponent = resultData.icon;
@@ -315,95 +501,175 @@ function App() {
     }));
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 p-4 sm:p-8 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
         
-        <div className={`max-w-4xl mx-auto relative z-10 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="bg-white/80 backdrop-blur-2xl rounded-[2.5rem] shadow-[0_20px_70px_rgba(219,39,119,0.3)] p-6 sm:p-12 border-2 border-white/60">
-            
-            <div className="text-center mb-10">
-              <div className={`inline-flex items-center justify-center w-28 h-28 bg-gradient-to-br ${resultData.color} rounded-full mb-8 shadow-2xl transform hover:scale-110 transition-transform duration-300`}>
-                <IconComponent className="w-14 h-14 text-white drop-shadow-lg" />
+        <div className={`max-w-4xl mx-auto relative z-10 py-8 px-4 sm:px-8 transition-all duration-700 ${fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          
+          {/* ヘッダー部分 */}
+          <div className={`bg-gradient-to-br ${resultData.color} rounded-3xl p-8 sm:p-12 mb-8 text-white shadow-2xl`}>
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full mb-6 shadow-xl">
+                <IconComponent className="w-12 h-12 text-white drop-shadow-lg" />
               </div>
               
-              <div className="inline-block mb-4">
-                <div className="text-6xl mb-2 animate-bounce">🎉</div>
-              </div>
-              
-              <h2 className="text-5xl font-black bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 bg-clip-text text-transparent mb-4 tracking-tight">
-                診断結果
+              <h2 className="text-3xl sm:text-4xl font-black mb-4">
+                🎨 あなたは
               </h2>
-              
-              <div className={`inline-block bg-gradient-to-r ${resultData.color} text-white px-10 py-4 rounded-full text-3xl font-black mb-6 shadow-2xl`}>
-                {resultData.name}
+              <div className="text-4xl sm:text-5xl font-black mb-6">
+                《{resultData.name}》
               </div>
-              
-              <p className="text-gray-700 text-xl font-bold">{resultData.description}</p>
+              <p className="text-xl sm:text-2xl font-bold">
+                {resultData.catchphrase}
+              </p>
             </div>
-
-            <div className="mb-10 bg-white/60 backdrop-blur-xl rounded-[2rem] p-4 sm:p-10 shadow-xl border-2 border-pink-100/50">
-              <ResponsiveContainer width="100%" height={window.innerWidth < 640 ? 280 : 320}>
-                <RadarChart data={radarData}>
-                  <PolarGrid strokeDasharray="3 3" stroke="#fecdd3" strokeWidth={2} />
-                  <PolarAngleAxis 
-                    dataKey="subject" 
-                    tick={{ fill: '#831843', fontSize: 10, fontWeight: 700 }}
-                  />
-                  <PolarRadiusAxis angle={90} domain={[0, maxScore]} tick={false} />
-                  <Radar
-                    name="適性スコア"
-                    dataKey="score"
-                    stroke={resultData.chartColor}
-                    fill={resultData.chartColor}
-                    fillOpacity={0.6}
-                    strokeWidth={3}
-                  />
-                </RadarChart>
-              </ResponsiveContainer>
-            </div>
-
-            <div className="space-y-6 mb-10">
-              <div className={`${resultData.bgColor} backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border-2 border-white/60`}>
-                <h3 className="font-black text-gray-800 mb-4 flex items-center text-xl">
-                  <Sparkles className="w-6 h-6 mr-3 text-pink-500" />
-                  おすすめ職場
-                </h3>
-                <p className="text-gray-800 font-bold text-base sm:text-lg leading-relaxed">{resultData.workplace}</p>
-              </div>
-
-              <div className={`${resultData.bgColor} backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border-2 border-white/60`}>
-                <h3 className="font-black text-gray-800 mb-4 flex items-center text-xl">
-                  <Target className="w-6 h-6 mr-3 text-purple-500" />
-                  キャリアアドバイス
-                </h3>
-                <p className="text-gray-800 font-bold text-base sm:text-lg leading-relaxed">{resultData.advice}</p>
-              </div>
-
-              <div className={`${resultData.bgColor} backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border-2 border-white/60`}>
-                <h3 className="font-black text-gray-800 mb-4 flex items-center text-xl">
-                  <Heart className="w-6 h-6 mr-3 text-rose-500" />
-                  次のステップ
-                </h3>
-                <p className="text-gray-800 mb-6 font-bold text-base sm:text-lg leading-relaxed">{resultData.cta}</p>
-                <a
-                  href={resultData.ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block w-full bg-gradient-to-r ${resultData.color} text-white font-black py-5 px-8 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center shadow-xl text-sm sm:text-lg whitespace-nowrap`}
-                >
-                  💌 無料転職相談を申し込む
-                </a>
-              </div>
-            </div>
-
-            <button
-              onClick={resetTest}
-              className="w-full bg-white/90 backdrop-blur-sm text-gray-700 font-bold py-5 px-8 rounded-full hover:bg-white hover:shadow-xl hover:scale-105 transition-all duration-300 border-3 border-pink-200 text-base sm:text-lg whitespace-nowrap"
-            >
-              🔄 もう一度診断する
-            </button>
           </div>
+
+          {/* タイプの詳細説明 */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 sm:p-10 mb-8 shadow-xl">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              {resultData.description}
+            </p>
+          </div>
+
+          {/* レーダーチャート */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-6 sm:p-10 mb-8 shadow-xl">
+            <h3 className="text-2xl sm:text-3xl font-black text-gray-800 mb-6 text-center">
+              📊 総合評価
+            </h3>
+            <ResponsiveContainer width="100%" height={window.innerWidth < 640 ? 280 : 320}>
+              <RadarChart data={radarData}>
+                <PolarGrid strokeDasharray="3 3" stroke="#fecdd3" strokeWidth={2} />
+                <PolarAngleAxis 
+                  dataKey="subject" 
+                  tick={{ fill: '#831843', fontSize: 10, fontWeight: 700 }}
+                />
+                <PolarRadiusAxis angle={90} domain={[0, maxScore]} tick={false} />
+                <Radar
+                  name="適性スコア"
+                  dataKey="score"
+                  stroke={resultData.chartColor}
+                  fill={resultData.chartColor}
+                  fillOpacity={0.6}
+                  strokeWidth={3}
+                />
+              </RadarChart>
+            </ResponsiveContainer>
+            <p className="text-center text-gray-700 font-bold mt-6">
+              {resultData.summary}
+            </p>
+          </div>
+
+          {/* 強みと苦手な環境 */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 sm:p-10 mb-8 shadow-xl">
+            <h3 className="text-2xl sm:text-3xl font-black text-gray-800 mb-6 flex items-center">
+              <Sparkles className="w-8 h-8 mr-3 text-pink-500" />
+              💡 あなたの強みと苦手な環境
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <h4 className="text-lg font-black text-gray-800 mb-4 flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-2 text-green-500" />
+                  💪 あなたの強み
+                </h4>
+                <ul className="space-y-3">
+                  {resultData.strengths.map((strength, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-green-500 mr-2 flex-shrink-0">✓</span>
+                      <span className="text-gray-700">{strength}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-black text-gray-800 mb-4 flex items-center">
+                  <XCircle className="w-6 h-6 mr-2 text-red-500" />
+                  😓 あなたが苦手な環境
+                </h4>
+                <ul className="space-y-3">
+                  {resultData.weaknesses.map((weakness, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-red-500 mr-2 flex-shrink-0">✗</span>
+                      <span className="text-gray-700">{weakness}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* おすすめの職場 */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 sm:p-10 mb-8 shadow-xl">
+            <h3 className="text-2xl sm:text-3xl font-black text-gray-800 mb-6 flex items-center">
+              <Building2 className="w-8 h-8 mr-3 text-purple-500" />
+              💼 あなたにおすすめの美容クリニック・職場
+            </h3>
+            
+            <div className="space-y-6">
+              {resultData.recommendedWorkplaces.map((workplace, index) => {
+                const WorkplaceIcon = workplace.icon;
+                return (
+                  <div key={index} className={`${resultData.bgColor} rounded-2xl p-6 border-2 border-white/60`}>
+                    <div className="flex items-start mb-3">
+                      <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${resultData.color} flex items-center justify-center mr-4 flex-shrink-0`}>
+                        <WorkplaceIcon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-black text-gray-800 mb-2">
+                          {workplace.title}
+                        </h4>
+                        <p className="text-sm text-gray-600 font-bold mb-3">
+                          ＜仕事内容＞
+                        </p>
+                        <p className="text-gray-700 mb-3">
+                          {workplace.description}
+                        </p>
+                        <p className="text-sm text-gray-600 font-bold mb-2">
+                          ＜こんな人におすすめ！＞
+                        </p>
+                        <p className="text-gray-700 flex items-start">
+                          <span className="text-pink-500 mr-2">✓</span>
+                          {workplace.suitable}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 sm:p-10 mb-8 shadow-xl text-center">
+            <h3 className="text-2xl sm:text-3xl font-black text-gray-800 mb-4">
+              🌟 次のステップへ
+            </h3>
+            <p className="text-gray-700 mb-6 font-bold text-base sm:text-lg">
+              あなたにぴったりの美容ナース転職をサポートします
+            </p>
+            <a
+              href={resultData.ctaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-block bg-gradient-to-r ${resultData.color} text-white font-black py-5 px-12 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl text-base sm:text-lg mb-4`}
+            >
+              💌 無料転職相談を申し込む
+            </a>
+            <p className="text-sm text-gray-600">
+              ※ 完全無料・1分で申し込み完了
+            </p>
+          </div>
+
+          {/* もう一度診断するボタン */}
+          <button
+            onClick={resetTest}
+            className="w-full bg-white/90 backdrop-blur-sm text-gray-700 font-bold py-5 px-8 rounded-full hover:bg-white hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-pink-200 text-base sm:text-lg"
+          >
+            🔄 もう一度診断する
+          </button>
         </div>
       </div>
     );
